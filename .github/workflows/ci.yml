@@ -75,7 +75,7 @@ jobs:
         name: Authenticate to GCP
         with:
           project_id: 'cs1660-spring2025-mdn29' # update with your project ID
-          workload_identity_provider: 'projects/111147801991/locations/global/workloadIdentityPools/github' # is this right?
+          workload_identity_provider: 'projects/111147801991/locations/global/workloadIdentityPools/github/providers/MilesN29' # is this right?
 
 #      # configure/login with docker
 #      - name: gcloud Configure Docker
