@@ -9,6 +9,8 @@ services:
       timeout: 60s
       retries: 5
     ### Add environment variables here
+    #just got this info from batabase.py
+    #im confused tho istn the whole point to keep this stuff a secret?
     environment:
       DATABASE_URL: postgresql://postgres:postgrespassword@postgres:5432/tasksdb
       POSTGRES_USER: postgres
