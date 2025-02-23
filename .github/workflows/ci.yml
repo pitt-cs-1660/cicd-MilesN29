@@ -92,5 +92,5 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-central1-docker.pkg.dev/cs1660-spring2025-mdn29/cicd-MilesN29-repo/fastapi-server:v2
+          tags: us-central1-docker.pkg.dev/cs1660-spring2025-mdn29/cicd-milesn29-repo/fastapi-server:v2
           
