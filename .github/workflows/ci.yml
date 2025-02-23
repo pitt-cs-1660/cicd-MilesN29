@@ -75,23 +75,22 @@ jobs:
         name: Authenticate to GCP
         with:
           project_id: 'cs1660-spring2025-mdn29' # update with your project ID
-          workload_identity_provider: 'projects/111147801991/locations/global/workloadIdentityPools/github/providers/MilesN29' # is this right?
+          workload_identity_provider: 'projects/111147801991/locations/global/workloadIdentityPools/github/providers/my-repo' #ok i think this is right now
 
-#      # configure/login with docker
-#      - name: gcloud Configure Docker
-#        run: gcloud auth configure-docker [YOUR REGION e.g. us-central1]-docker.pkg.dev
-
-#      # setup docker buildx
-#      - name: Setup docker buildx
-#        uses: docker/setup-buildx-action@v3
-#        with:
-#          platforms: linux/amd64,linux/arm64
-
-#      # build and push the image
-#      - name: Build and Push
-#        uses: docker/build-push-action@v6
-#        with:
-#          context: ./
-#          file: ./Dockerfile
-#          push: true
-#          tags: [YOUR REGION e.g. us-central1]-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
+      # configure/login with docker
+      - name: gcloud Configure Docker
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
+      # setup docker buildx
+      - name: Setup docker buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64
+      # build and push the image
+      - name: Build and Push
+        uses: docker/build-push-action@v6
+        with:
+          context: ./
+          file: ./Dockerfile
+          push: true
+          tags: us-central1-docker.pkg.dev/cs1660-spring2025-mdn29/cicd-miles29-repo/fastapi-server:v2
+          
