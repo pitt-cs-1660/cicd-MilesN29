@@ -76,6 +76,7 @@ jobs:
         with:
           project_id: 'cs1660-spring2025-mdn29'
           workload_identity_provider: 'projects/111147801991/locations/global/workloadIdentityPools/github/providers/my-repo'
+          service_account: 'github-actions-sa@cs1660-spring2025-mdn29.iam.gserviceaccount.com'
 
       # configure/login with docker
       - name: gcloud Configure Docker
